@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de IMC</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+
+    <label class="rotulo" for="peso">Peso</label>
+    <input type="number" id="peso" class="campo" placeholder="KG" />
+
+    <label class="rotulo" for="altura">Altura</label>
+    <input type="number" id="altura" class="campo" placeholder="CM" />
+
+    <button id="botao" class="botao">Calcular</button>
+
+    <!-- Frase exibida só antes do cálculo -->
+    <p id="frase" class="frase">Saiba agora se está no seu peso ideal!</p>
+
+    <!-- Tabela com o resultado, oculta no início -->
+    <table id="tabela-resultado" class="tabela-resultado oculto">
+      <thead>
+        <tr>
+          <th>Peso</th>
+          <th>Altura</th>
+          <th>IMC</th>
+          <th>Resultado</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td id="r-peso"></td>
+          <td id="r-altura"></td>
+          <td id="r-imc"></td>
+          <td id="r-classificacao"></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Tabela de referência -->
+    <table class="tabela-referencia">
+      <thead>
+        <tr>
+          <th>IMC</th>
+          <th>Classificação</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Menos de 17</td><td>Muito abaixo do peso</td></tr>
+        <tr><td>Entre 17 e 18,49</td><td>Abaixo do peso</td></tr>
+        <tr><td>Entre 18,5 e 24,99</td><td>Peso normal</td></tr>
+        <tr><td>Entre 25 e 29,99</td><td>Acima do peso</td></tr>
+        <tr><td>Entre 30 e 34,99</td><td>Obesidade I</td></tr>
+        <tr><td>Entre 35 e 39,99</td><td>Obesidade II (severa)</td></tr>
+        <tr><td>Acima de 40</td><td>Obesidade III (mórbida)</td></tr>
+      </tbody>
+    </table>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
